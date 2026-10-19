@@ -5,13 +5,14 @@ JPHACKS で開発した [jphacks/sp_2603](https://github.com/jphacks/sp_2603) �
 ## 決まっていること
 
 - **移管ではなく複製する。** jphacks/sp_2603 の持ち主は jphacks org で、こちらの権限は WRITE だけなので、そもそも移管はできない。元のリポジトリは JPHACKS の提出物としてそのまま残す。
-- **履歴ごと複製する。** コミットの作者情報を変えなければ、mofumofupop/fllooat の Contributors にも同じメンバーが表示される。
-- **`wakana2050` の Initial commit (JPHACKS のテンプレート) は外す。** mofumofupop/universe で cathiecode の Initial commit を外したときと同じ手順を使う。
+- **コミット履歴は残し、作者は otnc・usamimi39・DAVM26・oliveoiler の4人だけにする。** コミットの作者情報は変えないので、mofumofupop/fllooat の Contributors にも4人が表示される。そのために次の2つを外す。
+  - `wakana2050` の Initial commit (JPHACKS のテンプレート)。mofumofupop/universe で cathiecode の Initial commit を外したときと同じ手順を使う
+  - 24個のコミットのメッセージにある `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` の行。残すと、そのコミットの共同作者として Claude が表示される
 - **最初は private で作り、あとで public にする。**
-- **ライセンスは MIT のまま、著作権表示を `もふもふぽっぷ, JPHACKS` にする方針。** 詳しくは次の節。
+- **ライセンスは MIT のまま、著作権表示はもふもふぽっぷを先頭に書く。** JPHACKS の表示は、残す必要があるあいだは残す。詳しくは次の節。
 - **デプロイ元は、今後 mofumofupop/fllooat に移す。** 時期は未定で、それまでは jphacks/sp_2603 からデプロイする。
 
-## ライセンスは MIT のまま、著作権表示を足す
+## ライセンスは MIT のまま、もふもふぽっぷを先頭に書く
 
 元のリポジトリの `LICENSE` は次のとおりで、JPHACKS のテンプレートで置かれたもの。
 
@@ -21,7 +22,7 @@ The MIT License (MIT)
 Copyright (c) 2026 JPHACKS
 ```
 
-MIT ライセンスは、著作権表示とライセンス文を残せば、誰でも複製・改変・再配布できる。そのため複製そのものに許可は要らない。ただし、表示を残すことが条件なので、**元のコードについての JPHACKS の著作権表示は消さずに残し、もふもふぽっぷの名前を足す**形にする。
+MIT ライセンスは、著作権表示とライセンス文を残せば、誰でも複製・改変・再配布できる。そのため複製そのものに許可は要らない。ただし、表示を残すことが条件なので、**元のコードについての JPHACKS の著作権表示は消さずに残し、その前にもふもふぽっぷの名前を書く**。
 
 ```
 The MIT License (MIT)
@@ -29,28 +30,24 @@ The MIT License (MIT)
 Copyright (c) 2026 もふもふぽっぷ, JPHACKS
 ```
 
-名前の順番に決まりはなく、JPHACKS の名前が残っていればよい。日本語の名前を書いても問題ない。どちらの名前がどのコードの権利者かを分けて示したい場合は、次のように行を分けてもよいが、実務上の違いはほとんどない。
+**順番は、もふもふぽっぷを先頭にする。** MIT は名前の順番を定めていないので、JPHACKS の名前が残っていれば、どちらを先に書いても条件は満たす。日本語の名前を書いても問題ない。
 
-```
-Copyright (c) 2026 もふもふぽっぷ
-Copyright (c) 2026 JPHACKS
-```
-
-表記をもふもふぽっぷだけにしたい場合は、JPHACKS の表示を消してよいかを運営事務局に確認する必要がある。[JPHACKS2021 の参加者向けガイドライン](https://jphacks.github.io/2021-guideline/rule/) では、成果物の知的財産権は創作・開発した参加者に帰属するとされていて、`JPHACKS` の表記はテンプレート由来の可能性が高い。とはいえ表記を消す根拠としては弱いので、確認が取れるまでは両方を残す。
+JPHACKS の表示を消せるかどうかは、運営事務局への確認しだいとする。[JPHACKS2021 の参加者向けガイドライン](https://jphacks.github.io/2021-guideline/rule/) では、成果物の知的財産権は創作・開発した参加者に帰属するとされていて、`JPHACKS` の表記はテンプレート由来の可能性が高い。それでも表記を消す根拠としては弱いので、**消してよいと確認が取れるまでは残す**。確認が取れたら `Copyright (c) 2026 もふもふぽっぷ` だけにする。
 
 なお、jphacks/sp_2603 にあるコードは今後も MIT で公開され続ける。複製先でライセンスを変えても、元のリポジトリの分は取り消せない。
 
 ## チームメンバーの同意は未取得
 
-元のリポジトリのコントリビューターは次の5人。
+元のリポジトリ (`main` の157コミット) の作者は次のとおり。複製後に残るのは上の4人。
 
-| GitHub | コミット数 | 備考 |
+| GitHub | コミット数 | 複製後 |
 | --- | --- | --- |
-| otnc | 109 | |
-| usamimi39 | 39 | |
-| DAVM26 | 5 | |
-| oliveoiler | 3 | |
-| wakana2050 | 1 | JPHACKS のテンプレートの Initial commit。複製では外す |
+| otnc | 109 | 残す |
+| usamimi39 | 39 | 残す |
+| DAVM26 | 5 | 残す |
+| oliveoiler | 3 | 残す |
+| wakana2050 | 1 | 外す。JPHACKS のテンプレートの Initial commit |
+| Claude (共同作者) | 24 | 外す。コミットメッセージの `Co-Authored-By` 行だけを消し、コミット自体は残す |
 
 MIT を続けるだけなら、ほかのメンバーの同意がなくても複製と公開はできる。それでも、mofumofupop で続けることと、著作権表示にもふもふぽっぷを足すことは、usamimi39・DAVM26・oliveoiler に伝えて、記録が残る場所 (Issue や Discord) で同意を取っておく。MIT 以外のライセンスに変えることになった場合は、既存のコードを書いた全員の同意が必要になる。
 
@@ -89,15 +86,17 @@ mofumofupop/universe のモノレポ化と同じく、`git filter-repo` を使�
 
 1. jphacks/sp_2603 の `main` を clone する
 2. `wakana2050` の Initial commit を根元から外す。最初に残るコミットが `.gitignore` などを追加した形になる
-3. コミットメッセージ中の `#123` を `jphacks/sp_2603#123` に書き換える。元のリポジトリには Issue と PR が54番まであり、そのままだと複製先の別の Issue にリンクされてしまう
-4. このリポジトリの `main` に取り込み、`LICENSE` の著作権表示を `もふもふぽっぷ, JPHACKS` にする
-5. 履歴の中身が元の `main` と一致することを確かめてから push する
+3. コミットメッセージを2か所書き換える
+   - `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` の行を消す
+   - `#123` を `jphacks/sp_2603#123` に書き換える。元のリポジトリには Issue と PR が54番まであり、そのままだと複製先の別の Issue にリンクされてしまう
+4. 作者が otnc・usamimi39・DAVM26・oliveoiler の4人だけになったことと、ファイルの中身が元の `main` と一致することを確かめる
+5. このリポジトリの `main` に取り込み、`LICENSE` の著作権表示を `もふもふぽっぷ, JPHACKS` にしてから push する
 
 Issue、PR、Projects、Secrets は複製されない。必要なものは手で移すか、元のリポジトリへのリンクで済ませる。
 
 ## 未決の項目
 
-- JPHACKS の著作権表示を将来も残すか (運営事務局への確認しだい)
+- JPHACKS の著作権表示を消せるか (運営事務局への確認しだい。それまでは残す)
 - usamimi39・DAVM26・oliveoiler への説明と同意
 - 今年の JPHACKS の規約の確認
 - public にする時期
