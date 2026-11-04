@@ -85,7 +85,7 @@ mfmf.moe はほかの用途にも使っているので、DNS を変えるとき�
 
 GitHub Actions の `Deploy` ワークフロー ([.github/workflows/deploy.yml](../.github/workflows/deploy.yml)) で、main の CI が通ると自動でデプロイされます。web をビルドし、本番 D1 にマイグレーションを適用してから Worker をデプロイします。Actions の画面から手動で実行することもできます。
 
-Cloudflare Workers Builds は、Cloudflare の GitHub アプリを jphacks org に入れるのに admin の許可が要るため使っていません。
+Cloudflare Workers Builds は使っていません。jphacks/sp_2603 で開発していたころ、Cloudflare の GitHub アプリを jphacks org に入れるには admin の許可が要ったためです。
 
 ### 初回だけ行う設定
 
@@ -101,7 +101,7 @@ Cloudflare Workers Builds は、Cloudflare の GitHub アプリを jphacks org �
 3. 作ったトークンを、リポジトリの Actions のシークレット `CLOUDFLARE_API_TOKEN` に登録する。
 
    ```sh
-   gh secret set CLOUDFLARE_API_TOKEN -R jphacks/sp_2603
+   gh secret set CLOUDFLARE_API_TOKEN -R mofumofupop/fllooat
    ```
 
 4. Worker の「Settings」→「Variables and Secrets」で、本番用のシークレットを登録する。登録したシークレットは、その後のデプロイでも引き継がれます。
