@@ -1,16 +1,16 @@
 # jphacks/sp_2603 から mofumofupop/fllooat への移行
 
-JPHACKS で開発した [jphacks/sp_2603](https://github.com/jphacks/sp_2603) を、mofumofupop のリポジトリとして続けて開発するための調査結果と方針をまとめる。リポジトリは移管 (transfer) せず、履歴ごと複製する。2026年10月19日時点の内容で、未決の項目が残っている。
+JPHACKS で開発した [jphacks/sp_2603](https://github.com/jphacks/sp_2603) を、mofumofupop のリポジトリとして続けて開発するための方針と、移行でやったことをまとめる。リポジトリは移管 (transfer) せず、履歴ごと複製した。2026年11月4日に、複製、public 化、デプロイ元の切り替えを終えた。チームメンバーの同意と JPHACKS の規約の確認が残っている。
 
 ## 決まっていること
 
 - **移管ではなく複製する。** jphacks/sp_2603 の持ち主は jphacks org で、こちらの権限は WRITE だけなので、そもそも移管はできない。元のリポジトリは JPHACKS の提出物としてそのまま残す。
-- **コミット履歴は残し、作者は otnc・usamimi39・DAVM26・oliveoiler の4人だけにする。** コミットの作者情報は変えないので、mofumofupop/fllooat の Contributors にも4人が表示される。そのために次の2つを外す。
-  - `wakana2050` の Initial commit (JPHACKS のテンプレート)。mofumofupop/universe で cathiecode の Initial commit を外したときと同じ手順を使う
+- **コミット履歴は残し、作者は otnc・usamimi39・DAVM26・oliveoiler の4人だけにする。** コミットの作者情報は変えないので、mofumofupop/fllooat の Contributors にも4人が表示される。そのために次の2つを外した。
+  - `wakana2050` の Initial commit (JPHACKS のテンプレート)
   - 24個のコミットのメッセージにある `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` の行。残すと、そのコミットの共同作者として Claude が表示される
-- **最初は private で作り、あとで public にする。**
-- **ライセンスは MIT のまま、著作権表示はもふもふぽっぷを先頭に書く。** JPHACKS の表示は、残す必要があるあいだは残す。詳しくは次の節。
-- **デプロイ元は、今後 mofumofupop/fllooat に移す。** 時期は未定で、それまでは jphacks/sp_2603 からデプロイする。
+- **最初は private で作り、あとで public にする。** 2026年11月4日に public にした。
+- **ライセンスは MIT のまま、著作権表示はもふもふぽっぷを先頭に書き、JPHACKS の表示も残す。** 詳しくは次の節。
+- **デプロイ元を mofumofupop/fllooat に移す。** 2026年11月4日に切り替えた。
 
 ## ライセンスは MIT のまま、もふもふぽっぷを先頭に書く
 
@@ -32,13 +32,13 @@ Copyright (c) 2026 もふもふぽっぷ, JPHACKS
 
 **順番は、もふもふぽっぷを先頭にする。** MIT は名前の順番を定めていないので、JPHACKS の名前が残っていれば、どちらを先に書いても条件は満たす。日本語の名前を書いても問題ない。
 
-JPHACKS の表示を消せるかどうかは、運営事務局への確認しだいとする。[JPHACKS2021 の参加者向けガイドライン](https://jphacks.github.io/2021-guideline/rule/) では、成果物の知的財産権は創作・開発した参加者に帰属するとされていて、`JPHACKS` の表記はテンプレート由来の可能性が高い。それでも表記を消す根拠としては弱いので、**消してよいと確認が取れるまでは残す**。確認が取れたら `Copyright (c) 2026 もふもふぽっぷ` だけにする。
+**JPHACKS の表示は、今後もこのまま残す。** [JPHACKS2021 の参加者向けガイドライン](https://jphacks.github.io/2021-guideline/rule/) では、成果物の知的財産権は創作・開発した参加者に帰属するとされていて、`JPHACKS` の表記はテンプレート由来の可能性が高い。それでも表記を消す根拠としては弱いので、消さないことにした。
 
 なお、jphacks/sp_2603 にあるコードは今後も MIT で公開され続ける。複製先でライセンスを変えても、元のリポジトリの分は取り消せない。
 
 ## チームメンバーの同意は未取得
 
-元のリポジトリ (`main` の157コミット) の作者は次のとおり。複製後に残るのは上の4人。
+元のリポジトリ (`main` の157コミット) の作者は次のとおり。複製後に残したのは上の4人。
 
 | GitHub | コミット数 | 複製後 |
 | --- | --- | --- |
@@ -61,43 +61,39 @@ MIT を続けるだけなら、ほかのメンバーの同意がなくても複�
 - GitHub で公開するときは、原則として MIT ライセンスを置く
 - 商品化・サービス化したい場合は、運営事務局またはスポンサー企業と優先的に交渉する
 
-最後の項目が今年も同じなら、有料化や事業化をするときに影響する。public にする前に、今年の応募要項か参加者向けガイドラインで確認する。運営事務局の素材にあたるもの (テンプレートの README など) が残っていないかも、あわせて確認する。
+最後の項目が今年も同じなら、有料化や事業化をするときに影響する。その前に、今年の応募要項か参加者向けガイドラインで確認する。運営事務局の素材にあたるもの (テンプレートの README など) が残っていないかも、あわせて確認する。
 
 ## 第三者の素材のライセンスはそのまま引き継ぐ
 
 フォント (Gen Interface JP、OFL-1.1) などの第三者の素材は、元のリポジトリの `THIRD_PARTY_LICENSES.md` と `licenses/` で管理している。これは複製先でもそのまま残し、自分たちのライセンスの変更とは関係なく、それぞれのライセンスに従う。
 
-## デプロイ元を移すときの注意
+## デプロイ元の切り替え
 
-jphacks/sp_2603 は GitHub Actions から mofumofupop の Cloudflare アカウントにデプロイしている。Cloudflare 側には `GitHub Actions deploy (jphacks/sp_2603)` という API トークンがあり、jphacks/sp_2603 の Secrets に `CLOUDFLARE_API_TOKEN` が登録されている。
+jphacks/sp_2603 は GitHub Actions から mofumofupop の Cloudflare アカウントにデプロイしていた。複製先からも同じ Worker にデプロイすると、2つのリポジトリが同じ本番環境を上書きし合うので、2026年11月4日に次の順で切り替えた。
 
-複製先からも同じ Worker にデプロイすると、2つのリポジトリが同じ本番環境を上書きし合う。デプロイ元を移すときは、次の順で切り替える。
+1. Cloudflare で `GitHub Actions deploy (mofumofupop/fllooat)` という API トークンを作り、mofumofupop/fllooat の Secrets に `CLOUDFLARE_API_TOKEN` として登録した。権限は jphacks/sp_2603 のトークンと同じにした
+2. mofumofupop/fllooat の `Deploy` ワークフローを手で実行し、`fllooat.mfmf.moe` にデプロイできることを確かめた
+3. jphacks/sp_2603 の `Deploy` ワークフローを無効にし、Secrets から `CLOUDFLARE_API_TOKEN` を消した
+4. Cloudflare の `GitHub Actions deploy (jphacks/sp_2603)` トークンを削除した
 
-1. mofumofupop/fllooat 用の API トークンを作り、Secrets に登録する
-2. mofumofupop/fllooat からデプロイできることを確かめる
-3. jphacks/sp_2603 のデプロイ用ワークフローを止め、`CLOUDFLARE_API_TOKEN` を Secrets から消す
-4. Cloudflare の `GitHub Actions deploy (jphacks/sp_2603)` トークンを削除する
+今は mofumofupop/fllooat の `main` で CI が通ると、本番にデプロイされる。jphacks/sp_2603 に push しても、本番は変わらない。
 
-JPHACKS の審査や表彰が残っているあいだは、jphacks/sp_2603 のデプロイを止めない。
+## 複製の手順
 
-## 複製の手順 (予定)
-
-mofumofupop/universe のモノレポ化と同じく、`git filter-repo` を使う。
+mofumofupop/universe のモノレポ化と同じく、`git filter-repo` を使った。
 
 1. jphacks/sp_2603 の `main` を clone する
-2. `wakana2050` の Initial commit を根元から外す。最初に残るコミットが `.gitignore` などを追加した形になる
+2. `wakana2050` の Initial commit を根元から外す。`git replace --graft` で2番目のコミットの親をなくしてから `git filter-repo` を実行し、Initial commit で追加された `LICENSE` と `README.md` は、新しい最初のコミットに入るようにする
+   - PR #1 のマージコミットも1番目の親が Initial commit なので、親を PR のブランチ側だけにする。マージの前後で中身は変わらないので、このコミットは差分のない普通のコミットとして残る
 3. コミットメッセージを2か所書き換える
    - `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` の行を消す
    - `#123` を `jphacks/sp_2603#123` に書き換える。元のリポジトリには Issue と PR が54番まであり、そのままだと複製先の別の Issue にリンクされてしまう
 4. 作者が otnc・usamimi39・DAVM26・oliveoiler の4人だけになったことと、ファイルの中身が元の `main` と一致することを確かめる
-5. このリポジトリの `main` に取り込み、`LICENSE` の著作権表示を `もふもふぽっぷ, JPHACKS` にしてから push する
+5. このリポジトリの `main` に取り込み、`LICENSE` の著作権表示を `もふもふぽっぷ, JPHACKS` にしてから push する。このファイルを書いたコミットは、取り込んだ履歴の上に積み直した
 
-Issue、PR、Projects、Secrets は複製されない。必要なものは手で移すか、元のリポジトリへのリンクで済ませる。
+複製した履歴は156コミットで、書き換えたコミットからは GitHub の署名が外れた。Issue、PR、Projects、Secrets は複製されないので、必要なものは手で移すか、元のリポジトリへのリンクで済ませる。
 
 ## 未決の項目
 
-- JPHACKS の著作権表示を消せるか (運営事務局への確認しだい。それまでは残す)
 - usamimi39・DAVM26・oliveoiler への説明と同意
 - 今年の JPHACKS の規約の確認
-- public にする時期
-- デプロイ元を移す時期
